@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div.index-display {
+    width: 231px;
+    margin: 150px auto;
+    text-align: center;
+}
+p.default {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+a.default {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    background: #f63131;
+    padding: 10px 20px;
+    position: absolute;
+    right: 30%;
+    bottom: 15%;
+    border-radius: 10px;
+}
+
+section.default {
+    margin: 150px auto;
+    width: 341px;
+    text-align: center;
+    padding: 5px;
+}
+div.image {
+    position: relative;
+}
+
+h2.default {
+    font-size: 22px;
+    font-weight: 600;
+    color: red;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+span {
+    color: red;
+}
+input[type="radio"] {
+    accent-color: red;
+    margin: 0 5px;
+}
+a.welcome {
+    background: red;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    width: auto;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 30px;
+}
+a.welcome:hover,
+a.default:hover{
+    text-decoration: none;
+}
+div.welcome-image {
+    margin: 20px 0;
+    width: 90%;
+    text-align: center;
+}
+div.welcome-image img{
+    width: 100%;
+}
+
+div.welcome-content {
+    text-align: center;
+    display: grid;
+    row-gap: 30px;
+}
+
+@media screen and (max-width: 500px) {
+    section.default {
+        margin: 100px auto;
+    }
+    p.default {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    a.default {
+        bottom: 10px;
+        right: 10px;
+    }
+    a.welcome {
+        padding: 10px;
+        font-size: 20px;
+        width: 50%;
+        justify-self: center;
+    }
+}

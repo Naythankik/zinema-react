@@ -1,0 +1,142 @@
+main {
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+p.title {
+    margin: 20px 0;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 29px;
+    text-align: center;
+}
+div.form {
+    padding: 20px;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 4px 16px 2px #00000014;
+}
+div.names {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+div.telephone {
+    display: grid;
+    grid-template-columns: 0.5fr 3.5fr;
+    column-gap: 15px;
+}
+div.input {
+    display: grid;
+    margin-top: 10px;
+    padding: 5px;
+    position: relative;
+}
+div.input object {
+    width: 4%;
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+}
+div.input > label {
+    font-family: Inter;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    text-align: left;
+}
+div.input > input,
+div.telephone > input,
+div.telephone > select {
+    border: 1px solid #3a3a3a4d;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    background: none;
+}
+
+div.form div.forget {
+    text-align: right;
+    margin: 10px auto;
+}
+a {
+    text-decoration: none;
+    color: red;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 17px;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* div.form. */
+button {
+    background: red;
+    border: 1px solid #3a3a3a4d;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+    line-height: 19px;
+    margin: 10px auto;
+}
+button:hover {
+    color: red;
+    background: white;
+    border: 1px solid red;
+}
+div.keep-me {
+    text-align: left;
+}
+
+div.keep-me > input {
+    accent-color: red;
+    transform: scale(1.3);
+    padding: 10px;
+    margin-left: 5px;
+}
+div.keep-me > label {
+    margin-left: 10px;
+}
+p.signin {
+    text-align: center;
+}
+
+@media screen and (min-width: 500px) and (max-width: 850px) {
+    div.form {
+        width: 95%;
+    }
+    div.telephone > select {
+        padding: 0;
+        width: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    main {
+        margin: 5px auto;
+    }
+    div.form {
+        width: 100%;
+    }
+
+    div.telephone > select {
+        padding: 0;
+        width: auto;
+    }
+
+    p.signin {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+    }
+}
