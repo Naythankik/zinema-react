@@ -1,21 +1,49 @@
-import React from "react";
+import React, {useState} from "react";
 import './signin.css'
 import {Link} from "react-router-dom";
+import axiosInstance from "../api/axios";
 
 export const SigninPage = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [error, setError] = useState(false)
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        if(email === '' || password === ''){
+            setErrorMessage('All fields are required')
+            setError(true);
+            return
+        }
+        try{
+            const res = await axiosInstance.post('auth/signin' , {
+                email, password
+            })
+
+        }catch (e){
+            console.log(e)
+            setErrorMessage(e?.response?.data.error ?? "Something went wrong")
+            setError(true)
+        }
+    }
+
     return (
         <div>
             <main>
                 <p className="title">Sign In</p>
                 <div className="form">
-                    <form action="#">
-                        <div className="input">
+                    {error && <span className="notification">{errorMessage}</span>}
+                    <form onSubmit={handleSubmit}>
+                    <div className="input">
                             <label htmlFor="username">Username</label>
                             <input
-                                type="text"
-                                name="username"
-                                id="username"
-                                placeholder="Enter your username"
+                                type="email"
+                                name="email"
+                                value={email}
+                                id="email"
+                                onChange={(e) => {setEmail(e.target.value)}}
+                                placeholder="Enter your email"
                             />
                         </div>
                         <div className="input">
@@ -23,7 +51,9 @@ export const SigninPage = () => {
                             <input
                                 type="password"
                                 name="password"
+                                value={password}
                                 id="password"
+                                onChange={(e) => {setPassword(e.target.value)}}
                                 placeholder="Enter your password"
                             />
                         </div>

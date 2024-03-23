@@ -1,48 +1,44 @@
-import React from "react";
+import React, {useState} from "react";
 import './signin.css'
-import {Link} from "react-router-dom";
-import mail from '../Components/Assets/icons8-mail-ios/icons8-mail-50.png';
-import lock from '../Components/Assets/lock/icons8-lock-48.svg';
+import axiosInstance from "../api/axios";
 
 export const ForgetPasswordPage = () => {
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('')
+    const [error, setError] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const res = await axiosInstance.post('auth/forget-password',{email})
+            setMessage(res.data.message)
+            setError(false);
+        }catch (e){
+            setMessage(e?.response?.data.error ?? "Something went wrong")
+            setError(true)
+        }
+    }
     return (
         <main>
-            <p className="title">Create a new Password</p>
+            <p className="title">Forget Password</p>
             <div className="form">
-                <form action="./signin.html">
+                {error && <span className="notification">{message}</span> }
+                {!error && <span className="notification" style={{color: 'green'}}>{message}</span> }
+                <form onSubmit={handleSubmit}>
                     <div className="input">
                         <label htmlFor="username">Email Address</label>
                         <input
                             type="email"
                             name="email"
                             id="email"
+                            value={email}
+                            onChange={(e) => {setEmail(e.target.value)}}
                             placeholder="Enter your email"
                         />
-
-                        <object
-                            data={mail}
-                            type=""
-                        ></object>
                     </div>
 
-                    <div className="input">
-                        <label htmlFor="password">Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            placeholder="Enter new password"
-                        />
-                        <object data={lock} type=""></object>
-                    </div>
-                    <div className="forget">
-                        <Link to="#" style={{display: 'none'}}>Show Password</Link>
-                    </div>
-                    <button type="submit">Create Password</button>
-                    <div className="keep-me">
-                        <input type="checkbox" name="keep-me" id="keep-me"/>
-                        <label htmlFor="keep-me">Remember me</label>
-                    </div>
+                    <button type="submit">Forget Password</button>
                 </form>
             </div>
         </main>)
