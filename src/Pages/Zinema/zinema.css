@@ -3,11 +3,15 @@ a:hover {
 }
 
 nav {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #b2afaf;
+    position: sticky;
+    padding: 0 30px;
+    top: 0;
+    background: white;
 }
 
 div.logo {
@@ -92,23 +96,17 @@ div.user img{
 
 /* the body of catalogue */
 section.zinema {
-    padding: 10px;
-    background: none;
+    padding: 0 30px;
     width: 98%;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 10px;
     margin: 0 auto;
-}
-section.zinema::-webkit-scrollbar-thumb {
-    width: 20%;
-}
-section.zinema::-webkit-scrollbar-track {
-    background: red;
+    background: none;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 section.zinema .movie-catalogue {
-    width: 18.6%;
+    width: 100%;
     background: none;
     text-align: center;
     margin: 10px;
@@ -211,12 +209,7 @@ footer button.zinema > i {
         display: none;
     }
     nav{
-        border-bottom: 1px solid #b2afaf;
-        position: sticky;
-        width: 100%;
-        top: 0;
         padding: 0 10px;
-        background: white;
     }
     div.navigator {
         flex-direction: row-reverse;
@@ -232,25 +225,7 @@ footer button.zinema > i {
 
     /* mobile view for catalogue section.zinema */
     section.zinema {
-        height: 100vh;
-        margin: 0 auto;
-        overflow-y: scroll;
         width: 100%;
-    }
-    section.zinema::-webkit-scrollbar {
-        width: 2px;
-    }
-    section.zinema::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background: red;
-    }
-
-    section.zinema::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background: grey;
-    }
-    section.zinema .movie-catalogue {
-        width: 43%;
     }
 
     .movie-catalogue > p {
@@ -264,7 +239,7 @@ footer button.zinema > i {
     footer {
         display: flex;
         justify-content: space-between;
-        position: absolute;
-        bottom: -80px;
+        position: sticky;
+        bottom: 0;
     }
 }

@@ -18,7 +18,7 @@ export const Movies = (props) => {
 
             <div className="movie-catalogue">
                 <Link to="#">
-                <img src={second_image} alt=""/>
+                    <img src={second_image} alt=""/>
                 </Link>
                 <p>The Gray Man</p>
                 <button className="zinema" type="button">Buy Tickets</button>
@@ -26,7 +26,23 @@ export const Movies = (props) => {
 
             <div className="movie-catalogue">
                 <Link to="#">
-                <img src={third_image} alt=""/>
+                    <img src={second_image} alt=""/>
+                </Link>
+                <p>The Gray Man</p>
+                <button className="zinema" type="button">Buy Tickets</button>
+            </div>
+
+            <div className="movie-catalogue">
+                <Link to="#">
+                    <img src={second_image} alt=""/>
+                </Link>
+                <p>The Gray Man</p>
+                <button className="zinema" type="button">Buy Tickets</button>
+            </div>
+
+            <div className="movie-catalogue">
+                <Link to="#">
+                    <img src={third_image} alt=""/>
                 </Link>
                 <p>Glamour Girls</p>
                 <button className="zinema" type="button">Buy Tickets</button>
@@ -34,7 +50,7 @@ export const Movies = (props) => {
 
             <div className="movie-catalogue">
                 <Link to="#">
-                <img src={first_image} alt=""/>
+                    <img src={first_image} alt=""/>
                 </Link>
                 <p>Stranger Things</p>
                 <button className="zinema" type="button">Buy Tickets</button>
