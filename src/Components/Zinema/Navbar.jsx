@@ -27,7 +27,7 @@ export const Navbar = () => {
                     </form>
                 </div>
                 <div className="user">
-                    <img src={user_profile} />
+                    <img src={user_profile} alt="user"/>
                 </div>
             </div>
         </nav>
