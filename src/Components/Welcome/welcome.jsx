@@ -10,7 +10,7 @@ export const Welcome = () => {
             </div>
             <div className="welcome-content">
                 <h4 className="welcome-header">Welcome to ZINEMA Movies and Theatres</h4>
-                <Link to="/signin" className="welcome">Get Started</Link>
+                <Link to="/auth/signin" className="welcome">Get Started</Link>
             </div>
         </section>
     );

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './signin.css'
 import {Link} from "react-router-dom";
-import axiosInstance from "../api/axios";
+import axiosInstance from "../../api/axios";
 
 export const SignupPage = () => {
     const [firstName, setFirstName] = useState('')
@@ -168,7 +168,7 @@ export const SignupPage = () => {
                 </div>
             </main>
             <p className="signin">
-                Already have an account? <Link to="/signin">Sign In!</Link>
+                Already have an account? <Link to="/auth/signin">Sign In!</Link>
             </p>
         </div>
     )

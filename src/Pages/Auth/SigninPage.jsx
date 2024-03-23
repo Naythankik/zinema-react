@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './signin.css'
 import {Link} from "react-router-dom";
-import axiosInstance from "../api/axios";
+import axiosInstance from "../../api/axios";
 
 export const SigninPage = () => {
     const [email, setEmail] = useState('');
@@ -58,7 +58,7 @@ export const SigninPage = () => {
                             />
                         </div>
                         <div className="forget">
-                            <Link to="/forget-password">Forgot Password</Link>
+                            <Link to="/auth/forget-password">Forgot Password</Link>
                         </div>
                         <button type="submit">Sign In</button>
                         <div className="keep-me">
@@ -69,7 +69,7 @@ export const SigninPage = () => {
                 </div>
             </main>
             <p className="signin">
-                Don’t have an account? <Link className="signin" to="/signup"> Sign Up! </Link>
+                Don’t have an account? <Link className="signin" to="/auth/signup"> Sign Up! </Link>
             </p>
         </div>
     )

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './signin.css'
-import axiosInstance from "../api/axios";
+import axiosInstance from "../../api/axios";
 
 export const ForgetPasswordPage = () => {
     const [email, setEmail] = useState('');
