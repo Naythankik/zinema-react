@@ -9,6 +9,7 @@ import {SigninPage} from "./Pages/Auth/SigninPage";
 import {SignupPage} from "./Pages/Auth/SignupPage";
 import {ForgetPasswordPage} from "./Pages/Auth/ForgetPasswordPage";
 import {ResetPasswordPage} from "./Pages/Auth/ResetPasswordPage";
+import {BrowserPage} from "./Pages/Zinema/BrowserPage";
 
 function App() {
   return (
@@ -25,8 +26,11 @@ function App() {
                           <Route path="signin" element={<SigninPage />} />
                           <Route path="signup" element={<SignupPage />} />
                           <Route path="forget-password" element={<ForgetPasswordPage />} />
-                          <Route path="reset-password/:token" element={<ResetPasswordPage />} /></>
+                          <Route path="reset-password/:token" element={<ResetPasswordPage />} />
+                      </>
                   </Route>
+                  <Route path="browse" element={<BrowserPage />} />
+
               </Routes>
           </BrowserRouter>
   );

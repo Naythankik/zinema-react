@@ -163,7 +163,7 @@ export const SignupPage = () => {
                             />
                         </div>
 
-                        <button type="submit">Sign Up</button>
+                        <button className="signin" type="submit">Sign Up</button>
                     </form>
                 </div>
             </main>

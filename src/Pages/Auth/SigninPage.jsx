@@ -60,7 +60,7 @@ export const SigninPage = () => {
                         <div className="forget">
                             <Link to="/auth/forget-password">Forgot Password</Link>
                         </div>
-                        <button type="submit">Sign In</button>
+                        <button className="signin" type="submit">Sign In</button>
                         <div className="keep-me">
                             <input type="checkbox" name="keep-me" id="keep-me"/>
                             <label htmlFor="keep-me">Keep me signed in</label>

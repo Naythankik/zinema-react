@@ -38,7 +38,7 @@ export const ForgetPasswordPage = () => {
                         />
                     </div>
 
-                    <button type="submit">Forget Password</button>
+                    <button className="signin" type="submit">Forget Password</button>
                 </form>
             </div>
         </main>)

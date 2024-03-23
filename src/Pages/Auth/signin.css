@@ -76,7 +76,7 @@ a:hover {
     text-decoration: underline;
 }
 /* div.form. */
-button {
+button.signin {
     background: red;
     border: 1px solid #3a3a3a4d;
     outline: none;
@@ -90,7 +90,7 @@ button {
     line-height: 19px;
     margin: 10px auto;
 }
-button:hover {
+button.signin:hover {
     color: red;
     background: white;
     border: 1px solid red;

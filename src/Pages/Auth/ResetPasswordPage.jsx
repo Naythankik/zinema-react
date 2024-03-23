@@ -62,7 +62,7 @@ export const ResetPasswordPage = () => {
                         />
                     </div>
 
-                    <button type="submit">Reset Password</button>
+                    <button className="signin" type="submit">Reset Password</button>
                 </form>
             </div>
         </main>)
