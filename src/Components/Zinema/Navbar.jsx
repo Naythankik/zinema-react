@@ -14,11 +14,11 @@ export const Navbar = () => {
             </div>
             <div className="navigator">
                 <div className="menu">
-                    <Link to="#">In Theatres</Link>
-                    <Link to="#">Upcoming</Link>
-                    <Link to="#">Theatres</Link>
-                    <Link to="#">News</Link>
-                    <Link to="#">Settings</Link>
+                    <Link to="#" className="zinema">In Theatres</Link>
+                    <Link to="#" className="zinema">Upcoming</Link>
+                    <Link to="#" className="zinema">Theatres</Link>
+                    <Link to="#" className="zinema">News</Link>
+                    <Link to="#" className="zinema">Settings</Link>
                 </div>
                 <div className="search">
                     <form action="#">
