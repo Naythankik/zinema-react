@@ -1,13 +1,18 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './signin.css'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import axiosInstance from "../../api/axios";
 
 export const SigninPage = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [error, setError] = useState(false)
+
+    useEffect(() => {
+        setErrorMessage('')
+    }, [email, password]);
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -20,11 +25,17 @@ export const SigninPage = () => {
             const res = await axiosInstance.post('auth/signin' , {
                 email, password
             })
-
+            localStorage.setItem('token', res.data.data.data.token);
+            navigate('/browse');
         }catch (e){
-            console.log(e)
-            setErrorMessage(e?.response?.data.error ?? "Something went wrong")
-            setError(true)
+            if (error.response) {
+                setErrorMessage(error.response.data.error || 'Something went wrong');
+            } else if (error.request) {
+                setErrorMessage('Network error. Please check your internet connection.');
+            } else {
+                setErrorMessage('An error occurred. Please try again later.');
+            }
+            setError(true);
         }
     }
 
