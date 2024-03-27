@@ -10,6 +10,7 @@ import {SignupPage} from "./Pages/Auth/SignupPage";
 import {ForgetPasswordPage} from "./Pages/Auth/ForgetPasswordPage";
 import {ResetPasswordPage} from "./Pages/Auth/ResetPasswordPage";
 import {DashboardPage} from "./Pages/Zinema/DashboardPage";
+import {MoviePage} from "./Pages/Zinema/MoviePage";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
                               <Route path="reset-password/:token" element={<ResetPasswordPage />} />
                           </>
                       </Route>
-                      <Route path="browse" element={<DashboardPage />} />
+                  <Route path="browse" element={<DashboardPage />} />
+                  <Route path="movie/name" element={<MoviePage />} />
               </Routes>
           </BrowserRouter>
   );

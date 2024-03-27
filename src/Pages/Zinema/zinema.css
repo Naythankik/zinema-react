@@ -7,11 +7,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #b2afaf;
     position: sticky;
     padding: 0 30px;
     top: 0;
-    background: white;
+    background: whitesmoke;
 }
 
 div.logo {
@@ -137,7 +136,7 @@ section.zinema .movie-catalogue {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.movie-catalogue > button.zinema {
+button.zinema {
     padding: 10px 5px;
     outline: none;
     border: none;
@@ -172,15 +171,19 @@ footer button.zinema {
     border: none;
     border-radius: 10px;
 }
-footer button.zinema:hover {
-    box-shadow: 1px 1px 10px -1px red;
+footer button.zinema:hover > p{
+    color: red;
+}
+
+footer button.zinema:hover > i{
+    filter: brightness(0) saturate(100%) invert(13%) sepia(97%) saturate(5723%) hue-rotate(356deg) brightness(93%) contrast(112%);
 }
 
 footer button.zinema > p {
     color: grey;
     background: none;
     white-space: nowrap;
-    font-size: 1em;
+    font-size: .8em;
     font-weight: 200;
     margin: 10px 0;
 }
@@ -219,8 +222,85 @@ footer button.zinema > i {
         width: 100px;
     }
     div.user img{
+        width: 45px;
+        height: 45px;
+    }
+
+    section.movie-name{
+        background: yellow;
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.movie-info{
+        background: red;
+        display: flex;
+        flex-direction: column;
+    }
+    div.movie-details{
+        display: grid;
+        padding: 15px;
+        gap: 10px;
+    }
+    p.movie-genre,
+    p.movie-director,
+    span.cast{
+        font-weight: 600;
+        font-size: 15px;
+        color: #3A3A3A;
+    }
+
+    span.genre-list,
+    span.director-name{
+        margin-left: 10px;
+        font-weight: 500;
+        color: #3A3A3AD9;
+        text-transform: capitalize;
+    }
+    div.cast-list{
+        display: flex;
+        width: 80%;
+        flex-flow: wrap;
+        margin-top: 10px;
+        gap: 20px;
+        position: relative;
+        align-items: flex-start;
+    }
+    button.more-person{
+        padding: 10px 20px;
+        border: 1px solid #3A3A3ABF;
+        outline: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: lighter;
+        color: #3A3A3ABF;
+        background: none;
+        cursor: pointer;
+    }
+    a.cast-person{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        align-items: center;
+    }
+
+    a.cast-person img{
         width: 60px;
         height: 60px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+    }
+    span.cast-name{
+        color: #3A3A3AD9;
+        text-align: center;
+        width: 70px;
+        font-size: 13px;
+    }
+    p.movie-description{
+        font-size: 20px;
+        font-weight: 500;
+        color: #3A3A3AD9;
     }
 
     /* mobile view for catalogue section.zinema */
@@ -231,7 +311,7 @@ footer button.zinema > i {
     .movie-catalogue > p {
         font-weight: 600;
     }
-    .movie-catalogue > button.zinema {
+    button.zinema {
         font-weight: 300;
     }
 

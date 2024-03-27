@@ -5,11 +5,11 @@ import second_image from "../Assets/movie2.jpg"
 import third_image from "../Assets/movie4.jpeg"
 
 
-export const Movies = (props) => {
+export const MoviesList = (props) => {
     return (
         <section className="zinema">
             <div className="movie-catalogue">
-                <Link to="#">
+                <Link to="/movie/name">
                     <img src={first_image} alt=""/>
                 </Link>
                 <p>The Man From Toronto</p>
