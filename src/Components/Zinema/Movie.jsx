@@ -5,8 +5,16 @@ export const Movie = (props) => {
     return (
         <section className="movie-name">
             <div className="movie-info">
-                <div className="movie-image">
-                    <img src={movie_image} alt="movie"/>
+                <div className="movie-cards">
+                    <div className="movie-card">
+                        <div className="movie-image">
+                            <img src={movie_image} alt="movie"/>
+                        </div>
+                        <p className="movie-title">my village people</p>
+                    </div>
+                    <div className="first-card"></div>
+                    <div className="second-card"></div>
+                    <div className="last-card"></div>
                 </div>
                 <button className="zinema">BUY TICKETS</button>
             </div>
